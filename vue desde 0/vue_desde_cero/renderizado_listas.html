@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-for="(tarea, index) in tareas">{{ index + 1 }} - {{ tarea.nombre }}</p>
+        <p v-for="(valor, clave) in usuario">{{ clave }} - {{ valor }}</p>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            usuario: {
+                username: "pedro.jegova",
+                role: "admin"
+            },
+            tareas: [
+                {nombre: "Pedro", tiempo: 3},
+                {nombre: "Jesus", tiempo: 2},
+                {nombre: "Dniel", tiempo: 1},
+            ]
+        }
+    })
+</script>
+</html>
